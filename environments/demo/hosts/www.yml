@@ -78,7 +78,3 @@ public_tcp:
 #########################################################
 # List of public UDP ports to be exposed
 public_udp: []
-
-dependencies:
-  - host: dc01
-    network: corp
