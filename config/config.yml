@@ -12,20 +12,21 @@
 # AWS Configuration
 # Provide your AWS API credentials here
 aws:
-  cidr: ""
-  region: ""
+  cidr: "10.0.0.0/16"
+  region: "us-west-2"
   api_key: ""
   api_secret: ""
   external_r53_zone_id: ""
   s3:
-    region: ""
+    region: "us-west-2"
     bucket: ""
   dhcp:
-    domain: ""
-    nameservers: []
+    domain: "laforge.com"
+    nameservers:
+      - 10.0.254.250
     ntp_servers: []
   state_store:
-    region: ""
+    region: "us-west-2"
     bucket: ""
 #########################################################
 
