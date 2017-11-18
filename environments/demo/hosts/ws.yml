@@ -1,0 +1,81 @@
+#########################################################
+## LaForge NETWORK Config
+##
+## This file is unique to your competition environment.
+## These values will only effect objects in this environment.
+##
+## ** DO NOT ATTEMPT TO RUN LAFORGE WITHOUT CONFIGURING
+##    THIS FILE **
+#########################################################
+
+#########################################################
+# Host name (do not include suffix for environment)
+# This should be unique to your environment!
+hostname: ws
+
+#########################################################
+# Operating System (Required for proper Conn Types)
+# ** Case Sensitive **
+# Valid: ubuntu, centos, coreos, w2k16, w2k16sql, w2k12
+os: w2k16
+
+#########################################################
+# AMI ID (Optional - auto populates otherwise)
+#
+# This should be the AMI ID of the host you're using
+# You should not need to fill this out unless you have a
+# AMI ID you want to use for this image. Make sure the
+# Base OS aligns with the above described "os".
+ami:
+
+#########################################################
+# What is the last octet of the internal IP address?
+last_octet: 201
+
+#########################################################
+# List any internal CNAMEs you want pointing at this host
+# These CNAMEs will be scoped to the subdomain of the
+# Network they belong to.
+# Example:
+#    pod_domain=foo.com, network=bar, cname=baz
+#    CNAME will point to baz.bar.foo.com
+internal_cnames: []
+
+#########################################################
+# Should an external CNAME exist for this host on it's
+# public IP address?
+# This CNAME will *NOT* be scoped to the subdomain!!!
+# Technically, this will be an A record, but we use CNAME as term here.
+# Example:
+#    pod_domain=foo.com, network=bar, cname=woz
+#    CNAME will point to woz.foo.com
+external_cnames: []
+
+#########################################################
+# What is the instance size? (specific to network)
+instance_size: c4.2xlarge
+
+#########################################################
+# Scripts to run at instance creation
+scripts:
+  - Join-Domain.ps1
+
+#########################################################
+# What users should be created as local users on this host?
+user_groups: []
+
+#########################################################
+# List of public TCP ports to be exposed
+public_tcp:
+  - 1-65535
+
+#########################################################
+# List of public UDP ports to be exposed
+public_udp:
+  - 1-65535
+
+dependencies:
+  - host: dc01
+    network: corp
+
+override_password: BadPassword1
