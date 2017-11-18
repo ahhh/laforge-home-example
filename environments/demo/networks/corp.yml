@@ -33,5 +33,5 @@ variables:
 #########################################################
 # What hosts should we include in this network?
 included_hosts:
-  - dc
+ # - dc
   - ws
