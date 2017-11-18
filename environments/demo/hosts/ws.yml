@@ -75,7 +75,7 @@ public_udp:
   - 1-65535
 
 dependencies:
-  - host: dc01
+  - host: dc
     network: corp
 
 override_password: BadPassword1
