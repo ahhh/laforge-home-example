@@ -58,7 +58,7 @@ instance_size: c4.2xlarge
 #########################################################
 # Scripts to run at instance creation
 scripts:
-  - Join-Domain.ps1
+#  - Join-Domain.ps1
 
 #########################################################
 # What users should be created as local users on this host?
@@ -74,8 +74,8 @@ public_tcp:
 public_udp:
   - 1-65535
 
-dependencies:
-  - host: dc
-    network: corp
+#dependencies:
+#  - host: dc
+#    network: corp
 
 override_password: BadPassword1
