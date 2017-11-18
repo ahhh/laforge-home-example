@@ -2,6 +2,9 @@
 export DEBCONF_NONINTERACTIVE_SEEN=true
 export DEBIAN_FRONTEND=noninteractive
 
+# Google DNS
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
+
 # Upgrade lyfe
 apt -qy update > /dev/null
 apt -qy upgrade > /dev/null
