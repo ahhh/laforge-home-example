@@ -40,7 +40,7 @@ admin_ips: []
 #########################################################
 # Root Password
 # Root passwords will be set to this on hosts.
-root_password: ""
+root_password: "L4f0rGeEx@Mpl3"
 #########################################################
 
 #########################################################
@@ -52,5 +52,5 @@ ip_whitelist: []
 
 #########################################################
 # Competition Domain
-domain: grandchasm.com
+domain: laforge.com
 #########################################################
