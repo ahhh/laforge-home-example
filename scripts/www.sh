@@ -14,5 +14,4 @@ echo "world" >> /tmp/hello
 echo "{{ $.Host.Hostname }}-{{ $.Environment.Prefix }}{{ $.PodID }}" | tee -a /tmp/whoami
 
 # Install a webserver
-apt -y install lighttpd
-service lighttpd restart
+apt -yq install apache2
